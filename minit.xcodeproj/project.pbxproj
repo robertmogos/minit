@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40850DC51365D0AD00AEE67D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		408990FC1365D193002FE9AF /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 408990F11365D193002FE9AF /* GTMIPhoneUnitTestDelegate.m */; };
+		408990FD1365D193002FE9AF /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 408990F21365D193002FE9AF /* GTMIPhoneUnitTestMain.m */; };
+		408990FE1365D193002FE9AF /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 408990F41365D193002FE9AF /* GTMObjC2Runtime.m */; };
+		408990FF1365D193002FE9AF /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 408990F61365D193002FE9AF /* GTMRegex.m */; };
+		408991001365D193002FE9AF /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 408990F81365D193002FE9AF /* GTMSenTestCase.m */; };
+		408991011365D193002FE9AF /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 408990FA1365D193002FE9AF /* GTMUnitTestDevLog.m */; };
+		408991111365D378002FE9AF /* ATInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 408991101365D378002FE9AF /* ATInjector.m */; };
+		408991121365D378002FE9AF /* ATInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4089910F1365D378002FE9AF /* ATInjector.h */; };
+		408991131365D378002FE9AF /* ATInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 408991101365D378002FE9AF /* ATInjector.m */; };
+		408991161365D3C9002FE9AF /* ATModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 408991151365D3C9002FE9AF /* ATModule.m */; };
+		408991171365D3C9002FE9AF /* ATModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 408991141365D3C9002FE9AF /* ATModule.h */; };
+		408991181365D3C9002FE9AF /* ATModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 408991151365D3C9002FE9AF /* ATModule.m */; };
+		4089911B1365D3F1002FE9AF /* ATInjectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911A1365D3F1002FE9AF /* ATInjectorTest.m */; };
+		4089911D1365D3F1002FE9AF /* ATInjectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911A1365D3F1002FE9AF /* ATInjectorTest.m */; };
+		408991201365D3FF002FE9AF /* ATModuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911F1365D3FF002FE9AF /* ATModuleTest.m */; };
+		408991221365D3FF002FE9AF /* ATModuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911F1365D3FF002FE9AF /* ATModuleTest.m */; };
+		408991821365E23D002FE9AF /* ATInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 408991811365E23D002FE9AF /* ATInject.h */; };
+		AA747D9F0F9514B9006C5449 /* minit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		40850D631365C92700AEE67D /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		40850D6C1365CB1900AEE67D /* Unit Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40850D6E1365CB1900AEE67D /* Unit Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Test-Info.plist"; sourceTree = "<group>"; };
+		408990EF1365D193002FE9AF /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		408990F01365D193002FE9AF /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMIPhoneUnitTestDelegate.h; sourceTree = "<group>"; };
+		408990F11365D193002FE9AF /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestDelegate.m; sourceTree = "<group>"; };
+		408990F21365D193002FE9AF /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestMain.m; sourceTree = "<group>"; };
+		408990F31365D193002FE9AF /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMObjC2Runtime.h; sourceTree = "<group>"; };
+		408990F41365D193002FE9AF /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMObjC2Runtime.m; sourceTree = "<group>"; };
+		408990F51365D193002FE9AF /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMRegex.h; sourceTree = "<group>"; };
+		408990F61365D193002FE9AF /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMRegex.m; sourceTree = "<group>"; };
+		408990F71365D193002FE9AF /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSenTestCase.h; sourceTree = "<group>"; };
+		408990F81365D193002FE9AF /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSenTestCase.m; sourceTree = "<group>"; };
+		408990F91365D193002FE9AF /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMUnitTestDevLog.h; sourceTree = "<group>"; };
+		408990FA1365D193002FE9AF /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMUnitTestDevLog.m; sourceTree = "<group>"; };
+		408990FB1365D193002FE9AF /* RunIPhoneUnitTest.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RunIPhoneUnitTest.sh; sourceTree = "<group>"; };
+		4089910F1365D378002FE9AF /* ATInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATInjector.h; sourceTree = "<group>"; };
+		408991101365D378002FE9AF /* ATInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATInjector.m; sourceTree = "<group>"; };
+		408991141365D3C9002FE9AF /* ATModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATModule.h; sourceTree = "<group>"; };
+		408991151365D3C9002FE9AF /* ATModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATModule.m; sourceTree = "<group>"; };
+		4089911A1365D3F1002FE9AF /* ATInjectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATInjectorTest.m; sourceTree = "<group>"; };
+		4089911F1365D3FF002FE9AF /* ATModuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATModuleTest.m; sourceTree = "<group>"; };
+		408991811365E23D002FE9AF /* ATInject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATInject.h; path = ../tests/ATInject.h; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minit_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libminit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libminit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40850D6A1365CB1900AEE67D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40850DC51365D0AD00AEE67D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libminit.a */,
+				40850D6C1365CB1900AEE67D /* Unit Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* minit */ = {
+			isa = PBXGroup;
+			children = (
+				4089910E1365D34D002FE9AF /* tests */,
+				4089910D1365D325002FE9AF /* src */,
+				408990EE1365D193002FE9AF /* GTM */,
+				40850D631365C92700AEE67D /* README */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				40850D6E1365CB1900AEE67D /* Unit Test-Info.plist */,
+			);
+			name = minit;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		408990EE1365D193002FE9AF /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				408990EF1365D193002FE9AF /* GTMDefines.h */,
+				408990F01365D193002FE9AF /* GTMIPhoneUnitTestDelegate.h */,
+				408990F11365D193002FE9AF /* GTMIPhoneUnitTestDelegate.m */,
+				408990F21365D193002FE9AF /* GTMIPhoneUnitTestMain.m */,
+				408990F31365D193002FE9AF /* GTMObjC2Runtime.h */,
+				408990F41365D193002FE9AF /* GTMObjC2Runtime.m */,
+				408990F51365D193002FE9AF /* GTMRegex.h */,
+				408990F61365D193002FE9AF /* GTMRegex.m */,
+				408990F71365D193002FE9AF /* GTMSenTestCase.h */,
+				408990F81365D193002FE9AF /* GTMSenTestCase.m */,
+				408990F91365D193002FE9AF /* GTMUnitTestDevLog.h */,
+				408990FA1365D193002FE9AF /* GTMUnitTestDevLog.m */,
+				408990FB1365D193002FE9AF /* RunIPhoneUnitTest.sh */,
+			);
+			path = GTM;
+			sourceTree = "<group>";
+		};
+		4089910D1365D325002FE9AF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				408991811365E23D002FE9AF /* ATInject.h */,
+				4089910F1365D378002FE9AF /* ATInjector.h */,
+				408991101365D378002FE9AF /* ATInjector.m */,
+				408991141365D3C9002FE9AF /* ATModule.h */,
+				408991151365D3C9002FE9AF /* ATModule.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		4089910E1365D34D002FE9AF /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				4089911A1365D3F1002FE9AF /* ATInjectorTest.m */,
+				4089911F1365D3FF002FE9AF /* ATModuleTest.m */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* minit_Prefix.pch in Headers */,
+				408991121365D378002FE9AF /* ATInjector.h in Headers */,
+				408991171365D3C9002FE9AF /* ATModule.h in Headers */,
+				408991821365E23D002FE9AF /* ATInject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		40850D6B1365CB1900AEE67D /* Unit Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40850D711365CB1A00AEE67D /* Build configuration list for PBXNativeTarget "Unit Test" */;
+			buildPhases = (
+				40850D681365CB1900AEE67D /* Resources */,
+				40850D691365CB1900AEE67D /* Sources */,
+				40850D6A1365CB1900AEE67D /* Frameworks */,
+				40850D9C1365CE2100AEE67D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Unit Test";
+			productName = "Unit Test";
+			productReference = 40850D6C1365CB1900AEE67D /* Unit Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2AAC07D0554694100DB518D /* minit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "minit" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = minit;
+			productName = minit;
+			productReference = D2AAC07E0554694100DB518D /* libminit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "minit" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* minit */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* minit */,
+				40850D6B1365CB1900AEE67D /* Unit Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40850D681365CB1900AEE67D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40850D9C1365CE2100AEE67D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = $PROJECT_DIR/GTM/RunIPhoneUnitTest.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40850D691365CB1900AEE67D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408990FC1365D193002FE9AF /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				408990FD1365D193002FE9AF /* GTMIPhoneUnitTestMain.m in Sources */,
+				408990FE1365D193002FE9AF /* GTMObjC2Runtime.m in Sources */,
+				408990FF1365D193002FE9AF /* GTMRegex.m in Sources */,
+				408991001365D193002FE9AF /* GTMSenTestCase.m in Sources */,
+				408991011365D193002FE9AF /* GTMUnitTestDevLog.m in Sources */,
+				408991111365D378002FE9AF /* ATInjector.m in Sources */,
+				408991161365D3C9002FE9AF /* ATModule.m in Sources */,
+				4089911B1365D3F1002FE9AF /* ATInjectorTest.m in Sources */,
+				408991201365D3FF002FE9AF /* ATModuleTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408991131365D378002FE9AF /* ATInjector.m in Sources */,
+				408991181365D3C9002FE9AF /* ATModule.m in Sources */,
+				4089911D1365D3F1002FE9AF /* ATInjectorTest.m in Sources */,
+				408991221365D3FF002FE9AF /* ATModuleTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/minit.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = minit_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = minit;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/minit.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = minit_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = minit;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+			};
+			name = Release;
+		};
+		40850D6F1365CB1A00AEE67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Unit Test-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Unit Test";
+				SDKROOT = iphoneos4.1;
+			};
+			name = Debug;
+		};
+		40850D701365CB1A00AEE67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Unit Test-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Unit Test";
+				SDKROOT = iphoneos4.1;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "minit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "minit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40850D711365CB1A00AEE67D /* Build configuration list for PBXNativeTarget "Unit Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40850D6F1365CB1A00AEE67D /* Debug */,
+				40850D701365CB1A00AEE67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
