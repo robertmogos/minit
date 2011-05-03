@@ -1,0 +1,6 @@
+Minit is objective-c DI library inspired by Google Guice.
+
+Eventualy it will provide annotation support with code generation. 
+
+The code is at experimentation level. Roadmap will follow.
+

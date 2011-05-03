@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		405D607E137052B1006A629E /* ATKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 405D607C137052B1006A629E /* ATKey.h */; };
+		405D607F137052B1006A629E /* ATKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 405D607D137052B1006A629E /* ATKey.m */; };
+		405D6080137052B1006A629E /* ATKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 405D607D137052B1006A629E /* ATKey.m */; };
+		405D60AA13705E48006A629E /* ATKeyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 405D60A913705E48006A629E /* ATKeyTest.m */; };
 		40850DC51365D0AD00AEE67D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		408990FC1365D193002FE9AF /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 408990F11365D193002FE9AF /* GTMIPhoneUnitTestDelegate.m */; };
 		408990FD1365D193002FE9AF /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 408990F21365D193002FE9AF /* GTMIPhoneUnitTestMain.m */; };
@@ -25,11 +29,16 @@
 		408991201365D3FF002FE9AF /* ATModuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911F1365D3FF002FE9AF /* ATModuleTest.m */; };
 		408991221365D3FF002FE9AF /* ATModuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911F1365D3FF002FE9AF /* ATModuleTest.m */; };
 		408991821365E23D002FE9AF /* ATInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 408991811365E23D002FE9AF /* ATInject.h */; };
+		4092CCAA136F45E8000C2725 /* ATInjectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092CCA9136F45E8000C2725 /* ATInjectable.h */; };
+		4092CCF2136F4A19000C2725 /* ATBindable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092CCF1136F4A19000C2725 /* ATBindable.h */; };
 		AA747D9F0F9514B9006C5449 /* minit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		405D607C137052B1006A629E /* ATKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATKey.h; sourceTree = "<group>"; };
+		405D607D137052B1006A629E /* ATKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATKey.m; sourceTree = "<group>"; };
+		405D60A913705E48006A629E /* ATKeyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATKeyTest.m; sourceTree = "<group>"; };
 		40850D631365C92700AEE67D /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		40850D6C1365CB1900AEE67D /* Unit Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40850D6E1365CB1900AEE67D /* Unit Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Test-Info.plist"; sourceTree = "<group>"; };
@@ -53,6 +62,8 @@
 		4089911A1365D3F1002FE9AF /* ATInjectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATInjectorTest.m; sourceTree = "<group>"; };
 		4089911F1365D3FF002FE9AF /* ATModuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATModuleTest.m; sourceTree = "<group>"; };
 		408991811365E23D002FE9AF /* ATInject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATInject.h; path = ../tests/ATInject.h; sourceTree = "<group>"; };
+		4092CCA9136F45E8000C2725 /* ATInjectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATInjectable.h; sourceTree = "<group>"; };
+		4092CCF1136F4A19000C2725 /* ATBindable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATBindable.h; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libminit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libminit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +157,10 @@
 				408991101365D378002FE9AF /* ATInjector.m */,
 				408991141365D3C9002FE9AF /* ATModule.h */,
 				408991151365D3C9002FE9AF /* ATModule.m */,
+				4092CCA9136F45E8000C2725 /* ATInjectable.h */,
+				4092CCF1136F4A19000C2725 /* ATBindable.h */,
+				405D607C137052B1006A629E /* ATKey.h */,
+				405D607D137052B1006A629E /* ATKey.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -155,6 +170,7 @@
 			children = (
 				4089911A1365D3F1002FE9AF /* ATInjectorTest.m */,
 				4089911F1365D3FF002FE9AF /* ATModuleTest.m */,
+				405D60A913705E48006A629E /* ATKeyTest.m */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -170,6 +186,9 @@
 				408991121365D378002FE9AF /* ATInjector.h in Headers */,
 				408991171365D3C9002FE9AF /* ATModule.h in Headers */,
 				408991821365E23D002FE9AF /* ATInject.h in Headers */,
+				4092CCAA136F45E8000C2725 /* ATInjectable.h in Headers */,
+				4092CCF2136F4A19000C2725 /* ATBindable.h in Headers */,
+				405D607E137052B1006A629E /* ATKey.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +297,8 @@
 				408991161365D3C9002FE9AF /* ATModule.m in Sources */,
 				4089911B1365D3F1002FE9AF /* ATInjectorTest.m in Sources */,
 				408991201365D3FF002FE9AF /* ATModuleTest.m in Sources */,
+				405D6080137052B1006A629E /* ATKey.m in Sources */,
+				405D60AA13705E48006A629E /* ATKeyTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +310,7 @@
 				408991181365D3C9002FE9AF /* ATModule.m in Sources */,
 				4089911D1365D3F1002FE9AF /* ATInjectorTest.m in Sources */,
 				408991221365D3FF002FE9AF /* ATModuleTest.m in Sources */,
+				405D607F137052B1006A629E /* ATKey.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
