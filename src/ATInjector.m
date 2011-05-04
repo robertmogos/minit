@@ -11,6 +11,8 @@
 #import "ATInjector.h"
 #import "ATInjectable.h"
 #import "ATKey.h"
+// 'Provider' block
+typedef id(^ProviderBlock)(void);
 
 @implementation ATInjector
 -(id) init{
@@ -23,16 +25,11 @@
 -(id) instanceOf:(Class) cls{
   id result;
   ATKey *injectedKey = [ATKey keyWithClass:cls];
-  Class boundClass = [bindings_ objectForKey:injectedKey];
-  if ( nil == boundClass) {
-    boundClass = cls;
-  }
-  if ([cls conformsToProtocol:@protocol(ATInjectable)]) {
-    result = NULL;
-  }
-  else {
-    result = [(id)boundClass class_builder:self];
-  }
+  ProviderBlock provider = [bindings_ objectForKey:injectedKey];
+  if ( nil != provider) { return provider(); }
+  // I guess that there is no point in validating if the |cls| responds to 
+  // class_builder selector. If it dosen't it is a runtime error anyway
+  result = [(id)cls class_builder:self];
   return result;
 }
 
@@ -58,7 +55,12 @@
 
 -(id<ATBindable>) bind:(Class) cls toImplementation:(Class) impl{
   ATKey *key = [ATKey keyWithClass:cls];
-  [bindings_ setObject:impl forKey:key];
+  ProviderBlock provider = [[(id)^{
+    return [(id)impl class_builder:self];
+  } copy] autorelease];
+  
+  [bindings_ setObject:provider 
+                forKey:key];
   return self;
 }
    
