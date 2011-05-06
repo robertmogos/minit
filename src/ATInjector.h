@@ -10,9 +10,9 @@
 
 #import <Foundation/Foundation.h>
 #import "ATInject.h"
-#import "ATBindable.h"
+#import "ATBinder.h"
 
-@interface ATInjector : NSObject <ATInject,ATBindable> {
+@interface ATInjector : NSObject <ATInject,ATBinder> {
  @protected
   NSMutableDictionary* bindings_;
 }

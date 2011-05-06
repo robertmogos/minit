@@ -8,16 +8,20 @@
  */
 
 #import <Foundation/Foundation.h>
-
+@class ATAnnotation;
 // A binding key
 //
 @interface ATKey : NSObject <NSCopying>{
   @private
   Class cls_;
-  NSString *annotation_; 
+  ATAnnotation *annotation_; 
 }
 
+// returns a key for the |cls| class
 +(id) keyWithClass:(Class) cls;
+// returns a key a |cls| class named |name|
++(id) keyWithClass:(Class) cls named:(NSString* ) name;
+
 -(Class)cls;
--(NSString*) annotation;
+-(ATAnnotation*) annotation;
 @end

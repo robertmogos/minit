@@ -13,7 +13,7 @@
 #import "ATInject.h"
 
 @interface A : NSObject{
-@public BOOL initialized; 
+@public BOOL initialized_; 
 }
 -(id)init;
 @end
@@ -27,7 +27,7 @@
 }
 -(id)init{
   if (self = [super init]){
-    initialized = TRUE;
+    initialized_ = TRUE;
   }
   return self;
 }
@@ -75,20 +75,35 @@
 @implementation ATInjectorTest
 -(void) testAInit{
   A* a = [A class_builder:NULL];
-  STAssertTrue(a->initialized,@"Should be true after init");
+  STAssertTrue(a->initialized_,@"Should be true after init");
 }
 -(void) testInjctionNoBinding{
   ATInjector *i = [[[ATInjector alloc] init] autorelease];
   B* b = [i instanceOf:[B class]];
   A* injectedA= b->a_;
   STAssertNotNil(injectedA,@"Should be true after init");
-  STAssertTrue([injectedA isKindOfClass:[A class]],@"Should inject a A instance");
+  STAssertTrue([injectedA isKindOfClass:[A class]],@"Should retourn a A instance");
 }
 -(void) testInjctionWithSimpleClassBinding{
   ATInjector *i = [[[ATInjector alloc] init] autorelease];
   [i bind:[A class] toImplementation:[AA class]];
   id inejected = [i instanceOf:[A class]];
-  STAssertTrue([inejected isKindOfClass:[AA class]],@"Should inject a AA instance instead of A");
+  STAssertTrue([inejected isKindOfClass:[AA class]],@"retruned AA instance instead of A");
 }
+
+-(void) testInjctionWithNamedClassBinding{
+  ATInjector *i = [[[ATInjector alloc] init] autorelease];
+  [i bind:[A class] named:@"NAME" toImplementation:[AA class]];
+  id inejected = [i instanceOf:[A class]];
+  STAssertTrue([inejected isKindOfClass:[A class]],@"retruned AA instance instead of A");
+  inejected = [i instanceOf:[A class] named:@"NAME"];
+  STAssertTrue([inejected isKindOfClass:[AA class]],@"retruned AA instance instead of A");
+  inejected = [i instanceOf:[A class] named:@"UNBOUND"];
+  STAssertNil(inejected,@"If there is no binding named UNBOUND it should return nil");
+
+
+}
+
+
 
 @end

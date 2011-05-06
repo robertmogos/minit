@@ -9,12 +9,12 @@
 
 
 #import <Foundation/Foundation.h>
-#import "ATBindable.h"
+#import "ATBinder.h"
 @protocol ATInject;
 
 
 
-@interface ATModule : NSObject <ATBindable> {
+@interface ATModule : NSObject <ATBinder> {
   id <ATInject> injector_;
 }
 -(id) initWithInjector:(id <ATInject>) injector;

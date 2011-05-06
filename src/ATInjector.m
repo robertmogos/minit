@@ -22,6 +22,15 @@ typedef id(^ProviderBlock)(void);
   return self;
 }
 
+-(void) dealloc{
+  [bindings_ release];
+  [super dealloc];
+}
+
+#pragma mark Injection
+
+// Tries to find a simple binding of |cls| and returns a wired instance. If there
+// is no binding for |cls| builds and returns a instance.
 -(id) instanceOf:(Class) cls{
   id result;
   ATKey *injectedKey = [ATKey keyWithClass:cls];
@@ -33,9 +42,15 @@ typedef id(^ProviderBlock)(void);
   return result;
 }
 
+// Tries to find a named binding of |cls| and returns a wired instance. If there 
+// is no named binding returns nil
 -(id) instanceOf:(Class) cls named:(NSString*)name{
-  return NULL; // not implemented
+  ATKey *injectedKey = [ATKey keyWithClass:cls named:name];
+  ProviderBlock provider = [bindings_ objectForKey:injectedKey];
+  if ( nil != provider) { return provider();} 
+  return nil;
 }
+
 
 -(id) instanceOf:(Class) cls annotated:(Class) annotation{
   return NULL; // not implemented
@@ -53,7 +68,10 @@ typedef id(^ProviderBlock)(void);
   return NULL; // not implemented
 }
 
--(id<ATBindable>) bind:(Class) cls toImplementation:(Class) impl{
+#pragma mark Bindings
+// Maps a provider capable of building |impl| to a |cls| key in |bindings_|
+// Stores in |bindings_| a provider capable of building |impl|
+-(id<ATBinder>) bind:(Class) cls toImplementation:(Class) impl{
   ATKey *key = [ATKey keyWithClass:cls];
   ProviderBlock provider = [[(id)^{
     return [(id)impl class_builder:self];
@@ -63,9 +81,17 @@ typedef id(^ProviderBlock)(void);
                 forKey:key];
   return self;
 }
-   
--(void) dealloc{
-  [bindings_ release];
-  [super dealloc];
+// Maps a provider capable of building |impl| to a |cls| named |name| key in 
+// |bindings_|
+-(id<ATBinder>) bind:(Class) cls named:(NSString*) name toImplementation:(Class) impl{
+  ATKey *key = [ATKey keyWithClass:cls named:name];
+  ProviderBlock provider = [[(id)^{
+    return [(id)impl class_builder:self];
+  } copy] autorelease];
+  
+  [bindings_ setObject:provider 
+                forKey:key];
+  return self;
 }
+
 @end

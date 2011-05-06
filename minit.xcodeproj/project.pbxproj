@@ -30,7 +30,13 @@
 		408991221365D3FF002FE9AF /* ATModuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911F1365D3FF002FE9AF /* ATModuleTest.m */; };
 		408991821365E23D002FE9AF /* ATInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 408991811365E23D002FE9AF /* ATInject.h */; };
 		4092CCAA136F45E8000C2725 /* ATInjectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092CCA9136F45E8000C2725 /* ATInjectable.h */; };
-		4092CCF2136F4A19000C2725 /* ATBindable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092CCF1136F4A19000C2725 /* ATBindable.h */; };
+		4092CCF2136F4A19000C2725 /* ATBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092CCF1136F4A19000C2725 /* ATBinder.h */; };
+		40A110AE13716E920022A575 /* ATAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A110AD13716E920022A575 /* ATAnnotation.m */; };
+		40A110AF13716E920022A575 /* ATAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 40A110AC13716E920022A575 /* ATAnnotation.h */; };
+		40A110B013716E920022A575 /* ATAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A110AD13716E920022A575 /* ATAnnotation.m */; };
+		40A110B313716EB20022A575 /* ATNamedAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 40A110B113716EB20022A575 /* ATNamedAnnotation.h */; };
+		40A110B413716EB20022A575 /* ATNamedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A110B213716EB20022A575 /* ATNamedAnnotation.m */; };
+		40A110B513716EB20022A575 /* ATNamedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A110B213716EB20022A575 /* ATNamedAnnotation.m */; };
 		AA747D9F0F9514B9006C5449 /* minit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +69,11 @@
 		4089911F1365D3FF002FE9AF /* ATModuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATModuleTest.m; sourceTree = "<group>"; };
 		408991811365E23D002FE9AF /* ATInject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATInject.h; path = ../tests/ATInject.h; sourceTree = "<group>"; };
 		4092CCA9136F45E8000C2725 /* ATInjectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATInjectable.h; sourceTree = "<group>"; };
-		4092CCF1136F4A19000C2725 /* ATBindable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATBindable.h; sourceTree = "<group>"; };
+		4092CCF1136F4A19000C2725 /* ATBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATBinder.h; sourceTree = "<group>"; };
+		40A110AC13716E920022A575 /* ATAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAnnotation.h; sourceTree = "<group>"; };
+		40A110AD13716E920022A575 /* ATAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAnnotation.m; sourceTree = "<group>"; };
+		40A110B113716EB20022A575 /* ATNamedAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNamedAnnotation.h; sourceTree = "<group>"; };
+		40A110B213716EB20022A575 /* ATNamedAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNamedAnnotation.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libminit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libminit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,9 +168,13 @@
 				408991141365D3C9002FE9AF /* ATModule.h */,
 				408991151365D3C9002FE9AF /* ATModule.m */,
 				4092CCA9136F45E8000C2725 /* ATInjectable.h */,
-				4092CCF1136F4A19000C2725 /* ATBindable.h */,
+				4092CCF1136F4A19000C2725 /* ATBinder.h */,
 				405D607C137052B1006A629E /* ATKey.h */,
 				405D607D137052B1006A629E /* ATKey.m */,
+				40A110AC13716E920022A575 /* ATAnnotation.h */,
+				40A110AD13716E920022A575 /* ATAnnotation.m */,
+				40A110B113716EB20022A575 /* ATNamedAnnotation.h */,
+				40A110B213716EB20022A575 /* ATNamedAnnotation.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -187,8 +201,10 @@
 				408991171365D3C9002FE9AF /* ATModule.h in Headers */,
 				408991821365E23D002FE9AF /* ATInject.h in Headers */,
 				4092CCAA136F45E8000C2725 /* ATInjectable.h in Headers */,
-				4092CCF2136F4A19000C2725 /* ATBindable.h in Headers */,
+				4092CCF2136F4A19000C2725 /* ATBinder.h in Headers */,
 				405D607E137052B1006A629E /* ATKey.h in Headers */,
+				40A110AF13716E920022A575 /* ATAnnotation.h in Headers */,
+				40A110B313716EB20022A575 /* ATNamedAnnotation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +315,8 @@
 				408991201365D3FF002FE9AF /* ATModuleTest.m in Sources */,
 				405D6080137052B1006A629E /* ATKey.m in Sources */,
 				405D60AA13705E48006A629E /* ATKeyTest.m in Sources */,
+				40A110AE13716E920022A575 /* ATAnnotation.m in Sources */,
+				40A110B513716EB20022A575 /* ATNamedAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +329,8 @@
 				4089911D1365D3F1002FE9AF /* ATInjectorTest.m in Sources */,
 				408991221365D3FF002FE9AF /* ATModuleTest.m in Sources */,
 				405D607F137052B1006A629E /* ATKey.m in Sources */,
+				40A110B013716E920022A575 /* ATAnnotation.m in Sources */,
+				40A110B413716EB20022A575 /* ATNamedAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

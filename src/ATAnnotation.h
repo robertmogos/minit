@@ -7,10 +7,12 @@
  * with this source code in the file LICENSE.
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-// Something that can bind a class to it's implementation. 
-//
-@protocol ATBindable
--(id<ATBindable>) bind:(Class) cls toImplementation:(Class) impl;
+// A basic annotation class. Two instances of the same annotation are equal and 
+// have the same hash
+@interface ATAnnotation : NSObject {
+
+}
+
 @end
