@@ -67,7 +67,7 @@
 		408991151365D3C9002FE9AF /* ATModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATModule.m; sourceTree = "<group>"; };
 		4089911A1365D3F1002FE9AF /* ATInjectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATInjectorTest.m; sourceTree = "<group>"; };
 		4089911F1365D3FF002FE9AF /* ATModuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATModuleTest.m; sourceTree = "<group>"; };
-		408991811365E23D002FE9AF /* ATInject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATInject.h; path = ../tests/ATInject.h; sourceTree = "<group>"; };
+		408991811365E23D002FE9AF /* ATInject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATInject.h; sourceTree = "<group>"; };
 		4092CCA9136F45E8000C2725 /* ATInjectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATInjectable.h; sourceTree = "<group>"; };
 		4092CCF1136F4A19000C2725 /* ATBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATBinder.h; sourceTree = "<group>"; };
 		40A110AC13716E920022A575 /* ATAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAnnotation.h; sourceTree = "<group>"; };
