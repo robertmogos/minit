@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 // Something that can bind a class to it's implementation. 
 //
@@ -17,6 +17,15 @@
 -(id<ATBinder>) bind:(Class) cls toImplementation:(Class) impl;
 
 // Binds |cls| named |name| to it's implementation |impl|
--(id<ATBinder>) bind:(Class) cls named:(NSString*) name toImplementation:(Class) impl;
+-(id<ATBinder>) bind:(Class) cls 
+               named:(NSString*) name 
+    toImplementation:(Class) impl;
+
+// Binds |cls| named |name| to it's implementation |impl| in scope |scope|
+-(id<ATBinder>) bind:(Class) cls 
+               named:(NSString*) name 
+    toImplementation:(Class) impl
+             inScope:(Class) scope;
+
 
 @end

@@ -8,13 +8,5 @@
  */
 
 
-#import <Foundation/Foundation.h>
-#import "ATAnnotation.h"
-
-@interface ATNamedAnnotation : ATAnnotation {
- @protected
-  NSString* name_;
-}
--(id) initWithName:(NSString*) name;
--(NSString*) name;
-@end
+// When called returns an object
+typedef id(^ATProviderBlock)(void);

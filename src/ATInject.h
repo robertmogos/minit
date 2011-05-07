@@ -8,7 +8,7 @@
  */
 
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 /**
  * Something which can inject instances 

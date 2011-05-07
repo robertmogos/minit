@@ -9,12 +9,14 @@
 
 
 #import <Foundation/Foundation.h>
-#import "ATAnnotation.h"
+#import "ATScope.h"
 
-@interface ATNamedAnnotation : ATAnnotation {
- @protected
-  NSString* name_;
+// Provides the same instances of objects in the context of the injector. 
+// 
+@interface ATSingletonScope : NSObject <ATScope> {
+  @protected
+  // holds already created instances
+  NSMutableDictionary* instances_;
 }
--(id) initWithName:(NSString*) name;
--(NSString*) name;
+
 @end

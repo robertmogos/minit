@@ -11,6 +11,7 @@
 #import "GTMSenTestCase.h"
 #import "ATInjector.h"
 #import "ATInject.h"
+#import "ATSingletonScope.h"
 
 @interface A : NSObject{
 @public BOOL initialized_; 
@@ -100,8 +101,18 @@
   STAssertTrue([inejected isKindOfClass:[AA class]],@"retruned AA instance instead of A");
   inejected = [i instanceOf:[A class] named:@"UNBOUND"];
   STAssertNil(inejected,@"If there is no binding named UNBOUND it should return nil");
+}
 
-
+-(void) testSingletonBindings{
+  ATInjector *i = [[[ATInjector alloc] init] autorelease];
+  [i bind:[A class] named:@"NAME" toImplementation:[AA class] inScope:[ATSingletonScope class]];
+  id inejected = [i instanceOf:[A class]];
+  STAssertTrue([inejected isKindOfClass:[A class]],@"retruned AA instance instead of A");
+  id first = [i instanceOf:[A class] named:@"NAME"];
+  STAssertTrue([first isKindOfClass:[AA class]],@"retruned AA instance instead of A");
+  id seccond  = [i instanceOf:[A class] named:@"NAME"];
+  STAssertTrue([seccond isKindOfClass:[AA class]],@"If there is no binding named UNBOUND it should return nil");
+  STAssertEquals(first,seccond,@"the same instance should be injected when singleton bound");
 }
 
 

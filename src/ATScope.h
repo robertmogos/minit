@@ -9,12 +9,14 @@
 
 
 #import <Foundation/Foundation.h>
-#import "ATAnnotation.h"
+#import "ATProviderBlock.h"
 
-@interface ATNamedAnnotation : ATAnnotation {
- @protected
-  NSString* name_;
-}
--(id) initWithName:(NSString*) name;
--(NSString*) name;
+@class ATKey;
+
+@protocol ATScope
+
+// It should return a scoped provider for |key|. It may use the unscoped |provider| 
+// to build the object when needed.
+-(ATProviderBlock) scope:(ATKey*)key unscoped:(ATProviderBlock)provider;
+
 @end

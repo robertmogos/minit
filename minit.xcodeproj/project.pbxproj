@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40185D2713752CBE00551FC7 /* ATSingletonScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 40185D2613752CBE00551FC7 /* ATSingletonScope.m */; };
+		40185D2813752CBE00551FC7 /* ATSingletonScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 40185D2513752CBE00551FC7 /* ATSingletonScope.h */; };
+		40185D2913752CBE00551FC7 /* ATSingletonScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 40185D2613752CBE00551FC7 /* ATSingletonScope.m */; };
 		405D607E137052B1006A629E /* ATKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 405D607C137052B1006A629E /* ATKey.h */; };
 		405D607F137052B1006A629E /* ATKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 405D607D137052B1006A629E /* ATKey.m */; };
 		405D6080137052B1006A629E /* ATKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 405D607D137052B1006A629E /* ATKey.m */; };
@@ -42,6 +45,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40185D211375294E00551FC7 /* ATScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATScope.h; sourceTree = "<group>"; };
+		40185D2213752AC900551FC7 /* ATProviderBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATProviderBlock.h; sourceTree = "<group>"; };
+		40185D2513752CBE00551FC7 /* ATSingletonScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSingletonScope.h; sourceTree = "<group>"; };
+		40185D2613752CBE00551FC7 /* ATSingletonScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSingletonScope.m; sourceTree = "<group>"; };
 		405D607C137052B1006A629E /* ATKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATKey.h; sourceTree = "<group>"; };
 		405D607D137052B1006A629E /* ATKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATKey.m; sourceTree = "<group>"; };
 		405D60A913705E48006A629E /* ATKeyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATKeyTest.m; sourceTree = "<group>"; };
@@ -175,6 +182,10 @@
 				40A110AD13716E920022A575 /* ATAnnotation.m */,
 				40A110B113716EB20022A575 /* ATNamedAnnotation.h */,
 				40A110B213716EB20022A575 /* ATNamedAnnotation.m */,
+				40185D211375294E00551FC7 /* ATScope.h */,
+				40185D2213752AC900551FC7 /* ATProviderBlock.h */,
+				40185D2513752CBE00551FC7 /* ATSingletonScope.h */,
+				40185D2613752CBE00551FC7 /* ATSingletonScope.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -205,6 +216,7 @@
 				405D607E137052B1006A629E /* ATKey.h in Headers */,
 				40A110AF13716E920022A575 /* ATAnnotation.h in Headers */,
 				40A110B313716EB20022A575 /* ATNamedAnnotation.h in Headers */,
+				40185D2813752CBE00551FC7 /* ATSingletonScope.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +329,7 @@
 				405D60AA13705E48006A629E /* ATKeyTest.m in Sources */,
 				40A110AE13716E920022A575 /* ATAnnotation.m in Sources */,
 				40A110B513716EB20022A575 /* ATNamedAnnotation.m in Sources */,
+				40185D2713752CBE00551FC7 /* ATSingletonScope.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +344,7 @@
 				405D607F137052B1006A629E /* ATKey.m in Sources */,
 				40A110B013716E920022A575 /* ATAnnotation.m in Sources */,
 				40A110B413716EB20022A575 /* ATNamedAnnotation.m in Sources */,
+				40185D2913752CBE00551FC7 /* ATSingletonScope.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
