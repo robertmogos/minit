@@ -14,7 +14,7 @@
 
 
 
-@interface ATModule : NSObject <ATBinder> {
+@interface ATModule : NSObject {
   id <ATInject> injector_;
 }
 -(id) initWithInjector:(id <ATInject>) injector;

@@ -60,15 +60,21 @@
   return NULL; // not implemented
 }
 
--(id) providerOf:(Class) cls{
-  return NULL; // not implemented
+-(ATProviderBlock) providerOf:(Class) cls{
+  ATProviderBlock provider = [[(id)^{
+    return [self instanceOf:cls];
+  } copy] autorelease];
+  return provider;
 }
 
--(id) providerOf:(Class) cls named:(NSString*)name{
-  return NULL; // not implemented
+-(ATProviderBlock) providerOf:(Class) cls named:(NSString*)name{
+  ATProviderBlock provider = [[(id)^{
+    return [self instanceOf:cls named:name];
+  } copy] autorelease];
+  return provider;
 }
 
--(id) providerOf:(Class) cls annotated:(Class) annotation{
+-(ATProviderBlock) providerOf:(Class) cls annotated:(Class) annotation{
   return NULL; // not implemented
 }
 
@@ -91,6 +97,7 @@
                 forKey:key];
   return self;
 }
+
 // Maps a provider capable of building |impl| to a |cls| named |name| key in 
 // |bindings_|
 -(id<ATBinder>) bind:(Class) cls named:(NSString*) name toImplementation:(Class) impl{
@@ -102,6 +109,8 @@
   [self setBinding:provider forKey:key];
   return self;
 }
+
+
 
 // Maps a SCOPED provider capable of building |impl| to a |cls| named |name| key in 
 // |bindings_|

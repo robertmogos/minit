@@ -9,6 +9,7 @@
 
 
 #import <Foundation/Foundation.h>
+#import "ATProviderBlock.h"
 
 /**
  * Something which can inject instances 
@@ -25,10 +26,12 @@
 // |annotation|
 -(id) instanceOf:(Class) cls annotated:(Class) annotation;
 
--(id) providerOf:(Class) cls;
+-(ATProviderBlock) providerOf:(Class) cls;
 
--(id) providerOf:(Class) cls named:(NSString*)name;
+// Retruns a provider block of |cls| annotated with |name|
+-(ATProviderBlock) providerOf:(Class) cls named:(NSString*)name;
 
--(id) providerOf:(Class) cls annotated:(Class) annotation;
+// Retruns a provider block of |cls| annotated with annotated with |annotation|
+-(ATProviderBlock) providerOf:(Class) cls annotated:(Class) annotation;
 
 @end
