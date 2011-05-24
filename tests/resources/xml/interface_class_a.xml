@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+    <compounddef id="interface_class_a" kind="class" prot="public">
+        <compoundname>ClassA</compoundname>
+        <includes refid="_class_a_8h" local="no">ClassA.h</includes>
+        <sectiondef kind="public-func">
+            <memberdef kind="function" id="interface_class_a_1ac7628a851830f4f47c582ad2532ed9dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+                <type>id</type>
+                <definition>id ClassA::initWithString:namedString:annotatedString:</definition>
+                <argsstring>(NSString *str,[namedString] NSString *named,[annotatedString] NSString *anno)</argsstring>
+                <name>initWithString:namedString:annotatedString:</name>
+                <param>
+                    <type>NSString *</type>
+                    <declname>str</declname>
+                </param>
+                <param>
+                    <attributes>[namedString]</attributes>
+                    <type>NSString *</type>
+                    <declname>named</declname>
+                </param>
+                <param>
+                    <attributes>[annotatedString]</attributes>
+                    <type>NSString *</type>
+                    <declname>anno</declname>
+                </param>
+                <briefdescription>
+                    <para>A simple initializer annotated for dependency injection [minit]. </para>
+                </briefdescription>
+                <detaileddescription>
+                    <para>
+                        <parameterlist kind="param">
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>str</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>- this will be simply injected as a string </para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>named</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>@InjectNamed SomeString </para>
+                                </parameterdescription>
+                            </parameteritem>
+                            <parameteritem>
+                                <parameternamelist>
+                                    <parametername>anno</parametername>
+                                </parameternamelist>
+                                <parameterdescription>
+                                    <para>@AnnotatedString </para>
+                                </parameterdescription>
+                            </parameteritem>
+                        </parameterlist>
+                        <simplesect kind="return">
+                            <para>a newly initialized object </para>
+                        </simplesect>
+                    </para>
+                </detaileddescription>
+                <inbodydescription>
+        </inbodydescription>
+                <location file="/Users/adi/Desktop/apocope/dev/minit/tests/resources/objc/ClassA.h" line="24"/>
+            </memberdef>
+        </sectiondef>
+        <briefdescription>
+    </briefdescription>
+        <detaileddescription>
+    </detaileddescription>
+        <location file="/Users/adi/Desktop/apocope/dev/minit/tests/resources/objc/ClassA.h" line="14" bodyfile="/Users/adi/Desktop/apocope/dev/minit/tests/resources/objc/ClassA.h" bodystart="14" bodyend="-1"/>
+        <listofallmembers>
+            <member refid="interface_class_a_1ac7628a851830f4f47c582ad2532ed9dc" prot="public" virt="virtual">
+                <scope>ClassA</scope>
+                <name>initWithString:namedString:annotatedString:</name>
+            </member>
+        </listofallmembers>
+    </compounddef>
+</doxygen>

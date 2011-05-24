@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_class_a_8m" kind="file">
+    <compoundname>ClassA.m</compoundname>
+    <includes refid="_class_a_8h" local="yes">ClassA.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>ClassA.h</label>
+        <link refid="_class_a_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>objc/ClassA.m</label>
+        <link refid="ClassA.m"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/tests/resources/objc/ClassA.m"/>
+  </compounddef>
+</doxygen>

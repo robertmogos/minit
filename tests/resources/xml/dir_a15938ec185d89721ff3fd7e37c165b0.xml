@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_a15938ec185d89721ff3fd7e37c165b0" kind="dir">
+    <compoundname>objc/</compoundname>
+    <innerfile refid="_class_a_8h">ClassA.h</innerfile>
+    <innerfile refid="_class_a_8m">ClassA.m</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/tests/resources/objc/"/>
+  </compounddef>
+</doxygen>

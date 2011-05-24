@@ -40,6 +40,7 @@
 		40A110B313716EB20022A575 /* ATNamedAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 40A110B113716EB20022A575 /* ATNamedAnnotation.h */; };
 		40A110B413716EB20022A575 /* ATNamedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A110B213716EB20022A575 /* ATNamedAnnotation.m */; };
 		40A110B513716EB20022A575 /* ATNamedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A110B213716EB20022A575 /* ATNamedAnnotation.m */; };
+		40C86C4A1381A71700AC5F17 /* conf in Resources */ = {isa = PBXBuildFile; fileRef = 40C86C431381A71700AC5F17 /* conf */; };
 		AA747D9F0F9514B9006C5449 /* minit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,13 @@
 		40A110AD13716E920022A575 /* ATAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAnnotation.m; sourceTree = "<group>"; };
 		40A110B113716EB20022A575 /* ATNamedAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNamedAnnotation.h; sourceTree = "<group>"; };
 		40A110B213716EB20022A575 /* ATNamedAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNamedAnnotation.m; sourceTree = "<group>"; };
+		40C86C431381A71700AC5F17 /* conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = conf; sourceTree = "<group>"; };
+		40C86C461381A71700AC5F17 /* combine.xslt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = combine.xslt; sourceTree = "<group>"; };
+		40C86C471381A71700AC5F17 /* compound.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = compound.xsd; sourceTree = "<group>"; };
+		40C86C481381A71700AC5F17 /* index.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = index.xml; sourceTree = "<group>"; };
+		40C86C491381A71700AC5F17 /* index.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = index.xsd; sourceTree = "<group>"; };
+		40C86C4F1381A72600AC5F17 /* ClassA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
+		40C86C501381A72600AC5F17 /* ClassA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassA.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libminit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libminit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,11 +201,42 @@
 		4089910E1365D34D002FE9AF /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				40C86C421381A71700AC5F17 /* resources */,
 				4089911A1365D3F1002FE9AF /* ATInjectorTest.m */,
 				4089911F1365D3FF002FE9AF /* ATModuleTest.m */,
 				405D60A913705E48006A629E /* ATKeyTest.m */,
 			);
 			path = tests;
+			sourceTree = "<group>";
+		};
+		40C86C421381A71700AC5F17 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				40C86C431381A71700AC5F17 /* conf */,
+				40C86C441381A71700AC5F17 /* objc */,
+				40C86C451381A71700AC5F17 /* xml */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		40C86C441381A71700AC5F17 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				40C86C4F1381A72600AC5F17 /* ClassA.h */,
+				40C86C501381A72600AC5F17 /* ClassA.m */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		40C86C451381A71700AC5F17 /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				40C86C461381A71700AC5F17 /* combine.xslt */,
+				40C86C471381A71700AC5F17 /* compound.xsd */,
+				40C86C481381A71700AC5F17 /* index.xml */,
+				40C86C491381A71700AC5F17 /* index.xsd */,
+			);
+			path = xml;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +270,7 @@
 				40850D691365CB1900AEE67D /* Sources */,
 				40850D6A1365CB1900AEE67D /* Frameworks */,
 				40850D9C1365CE2100AEE67D /* ShellScript */,
+				40C86C6A1381A7DF00AC5F17 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -289,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C86C4A1381A71700AC5F17 /* conf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +348,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = $PROJECT_DIR/GTM/RunIPhoneUnitTest.sh;
+		};
+		40C86C6A1381A7DF00AC5F17 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DOXY=\"/Applications/Doxygen.app/Contents/Resources/doxygen\"\ncd $PROJECT_DIR/tests/resources \n$DOXY conf";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -74,10 +74,6 @@
   return provider;
 }
 
--(ATProviderBlock) providerOf:(Class) cls annotated:(Class) annotation{
-  return NULL; // not implemented
-}
-
 #pragma mark Bindings
 // registers a |key| bounded |provider| in |bindings_|
 -(void) setBinding:(ATProviderBlock)provider forKey:(ATKey*)key{
