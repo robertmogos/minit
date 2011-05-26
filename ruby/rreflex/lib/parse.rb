@@ -8,11 +8,14 @@ include REXML
 
   
 class Parse
+  
   def do_parse(xml)
     doc = Document.new(xml)
     @interfaces = []
     doc.elements.each("//compounddef[@kind='class']") {|c| do_class c}
+    return @interfaces
   end
+  
   def do_class i
     @c = 0
     interfaceName = i.elements['compoundname']
@@ -30,6 +33,7 @@ class Parse
       }
     @interfaces << interface;
   end
+  
   def do_method f
     if f.elements['type'].nil? then return nil end
     if f.elements['name'].nil? then return nil end
@@ -47,12 +51,24 @@ class Parse
       args << arg
     end
     method.arguments = args;
+    annotations = extract_annotations f
+    add_annotations(method,annotations)
     return method
+  end
+  
+  def add_annotations method, annotations    
+    method.arguments.each do |arg|
+      if annotations[arg.name].nil? then
+        arg.annotations = []
+      else
+        arg.annotations = annotations[arg.name]
+      end
+    end
   end
   
   def extract_annotations desc
     annotations = {}
-    desc.elements.each("/detaileddescription/para/parameterlist[@kind='param']/parameteritem"){ |p|
+    desc.elements.each("detaileddescription/para/parameterlist[@kind='param']/parameteritem"){ |p|
       if !p.elements['parameterdescription/para'].nil? then
         comment = p.elements['parameterdescription/para'].text
         annoMatch = /@[^ ]*/.match(comment)
