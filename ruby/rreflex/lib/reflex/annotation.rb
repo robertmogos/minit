@@ -1,4 +1,4 @@
-module Rreflex
+module RReflex
   class Annotation
     attr_accessor :name
     def initialize(name)

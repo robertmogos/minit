@@ -1,5 +1,5 @@
 require "reflex/typed_reff"
-module Rreflex
+module RReflex
   class MethodArgument < TypedReff
     attr_accessor :label
   end

@@ -54,7 +54,7 @@
 @end
 
 @implementation B
-+(id)class_builder:(id<ATInject>)inject;{
++(id)class_builder:(id<ATInject>)inject{
   A* a = [inject instanceOf:[A class]];
   return [[[self alloc] init:a ] autorelease];
 }

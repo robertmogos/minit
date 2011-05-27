@@ -1,8 +1,8 @@
 require "test/unit"
 require "rexml/document"
-require "parse"
+require "doxy_parser"
 
-class TestParse < Test::Unit::TestCase
+class TestDoxyParser < Test::Unit::TestCase
   def test_class_xml
     xml = <<-XML
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -85,8 +85,8 @@ class TestParse < Test::Unit::TestCase
         </compounddef>
     </doxygen>
     XML
-    parser = Parse.new()
-    r = parser.do_parse(xml)
+    parser = DoxyParser.new()
+    r = parser.parse(xml)
     m = r[0].methods[0]
     assert_not_nil(m)
     assert_equal(m.returnType,'id')
@@ -104,6 +104,7 @@ class TestParse < Test::Unit::TestCase
     assert_equal(m.arguments[2].annotations[0].name,'@AnnotatedString')
     assert_equal(m.arguments[2].name,'anno')
     assert_equal(m.arguments[2].type,"NSString *")
+    puts r.inspect
   end
   def test_f2unction_xml
     xml = <<-XML
@@ -136,8 +137,8 @@ class TestParse < Test::Unit::TestCase
       </memberdef>
     XML
     function_doc = REXML::Document.new(xml)
-    parser = Parse.new()
-    r = parser.do_method function_doc.root
+    parser = DoxyParser.new()
+    r = parser.parse_method function_doc.root
     assert_not_nil(r)
     assert_equal(r.returnType,'id')
     assert_equal(r.name,'initWithString:namedString:annotatedString:')
@@ -152,7 +153,7 @@ class TestParse < Test::Unit::TestCase
     assert_equal(r.arguments[2].name,'anno')
     assert_equal(r.arguments[2].type,"NSString *")
   end
-  def test_extract_annotations
+  def test_parse_annotations
     xml = <<-XML
     <detaileddescription>
         <para>
@@ -189,8 +190,8 @@ class TestParse < Test::Unit::TestCase
     </detaileddescription>
     XML
     annotation_doc = REXML::Document.new(xml)
-    parser = Parse.new()
-    annotations = parser.extract_annotations annotation_doc
+    parser = DoxyParser.new()
+    annotations = parser.parse_annotations annotation_doc
     assert_equal(annotations['named'][0].name,'@InjectNamed(SomeString)')
     assert_equal(annotations['anno'][0].name,'@AnnotatedString')
   end

@@ -1,4 +1,4 @@
-module Rreflex
+module RReflex
   class Method
     attr_accessor :name,:arguments,:returnType
   

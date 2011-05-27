@@ -1,4 +1,4 @@
-module Rreflex
+module RReflex
   class TypedReff
     attr_accessor :type,:name, :annotations
     def initialize(type)

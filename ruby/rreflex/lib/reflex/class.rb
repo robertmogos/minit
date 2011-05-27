@@ -1,4 +1,4 @@
-module Rreflex
+module RReflex
   class Class
     attr_accessor :name, :methods
     def initialize(name)
