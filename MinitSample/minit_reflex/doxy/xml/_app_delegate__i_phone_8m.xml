@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_app_delegate__i_phone_8m" kind="file">
+    <compoundname>AppDelegate_iPhone.m</compoundname>
+    <includes refid="_app_delegate__i_phone_8h" local="yes">AppDelegate_iPhone.h</includes>
+    <includes local="yes">ATInjector.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="6">
+        <label>AppDelegate_iPhone.h</label>
+        <link refid="_app_delegate__i_phone_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>iPhone/AppDelegate_iPhone.m</label>
+        <link refid="AppDelegate_iPhone.m"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ATInjector.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.m"/>
+  </compounddef>
+</doxygen>

@@ -1,6 +1,6 @@
 require "test/unit"
 require "rexml/document"
-require "doxy_parser"
+require "minit/doxy_parser.rb"
 
 class TestDoxyParser < Test::Unit::TestCase
   def test_class_xml
@@ -85,7 +85,7 @@ class TestDoxyParser < Test::Unit::TestCase
         </compounddef>
     </doxygen>
     XML
-    parser = DoxyParser.new()
+    parser = Minit::DoxyParser.new()
     r = parser.parse(xml)
     m = r[0].methods[0]
     assert_not_nil(m)
@@ -137,7 +137,7 @@ class TestDoxyParser < Test::Unit::TestCase
       </memberdef>
     XML
     function_doc = REXML::Document.new(xml)
-    parser = DoxyParser.new()
+    parser = Minit::DoxyParser.new()
     r = parser.parse_method function_doc.root
     assert_not_nil(r)
     assert_equal(r.returnType,'id')
@@ -190,7 +190,7 @@ class TestDoxyParser < Test::Unit::TestCase
     </detaileddescription>
     XML
     annotation_doc = REXML::Document.new(xml)
-    parser = DoxyParser.new()
+    parser = Minit::DoxyParser.new()
     annotations = parser.parse_annotations annotation_doc
     assert_equal(annotations['named'][0].name,'@InjectNamed(SomeString)')
     assert_equal(annotations['anno'][0].name,'@AnnotatedString')

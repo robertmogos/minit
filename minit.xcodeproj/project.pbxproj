@@ -22,25 +22,25 @@
 		408991001365D193002FE9AF /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 408990F81365D193002FE9AF /* GTMSenTestCase.m */; };
 		408991011365D193002FE9AF /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 408990FA1365D193002FE9AF /* GTMUnitTestDevLog.m */; };
 		408991111365D378002FE9AF /* ATInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 408991101365D378002FE9AF /* ATInjector.m */; };
-		408991121365D378002FE9AF /* ATInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4089910F1365D378002FE9AF /* ATInjector.h */; };
+		408991121365D378002FE9AF /* ATInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4089910F1365D378002FE9AF /* ATInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		408991131365D378002FE9AF /* ATInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 408991101365D378002FE9AF /* ATInjector.m */; };
 		408991161365D3C9002FE9AF /* ATModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 408991151365D3C9002FE9AF /* ATModule.m */; };
 		408991171365D3C9002FE9AF /* ATModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 408991141365D3C9002FE9AF /* ATModule.h */; };
 		408991181365D3C9002FE9AF /* ATModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 408991151365D3C9002FE9AF /* ATModule.m */; };
 		4089911B1365D3F1002FE9AF /* ATInjectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911A1365D3F1002FE9AF /* ATInjectorTest.m */; };
-		4089911D1365D3F1002FE9AF /* ATInjectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911A1365D3F1002FE9AF /* ATInjectorTest.m */; };
 		408991201365D3FF002FE9AF /* ATModuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911F1365D3FF002FE9AF /* ATModuleTest.m */; };
-		408991221365D3FF002FE9AF /* ATModuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4089911F1365D3FF002FE9AF /* ATModuleTest.m */; };
-		408991821365E23D002FE9AF /* ATInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 408991811365E23D002FE9AF /* ATInject.h */; };
 		4092CCAA136F45E8000C2725 /* ATInjectable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092CCA9136F45E8000C2725 /* ATInjectable.h */; };
-		4092CCF2136F4A19000C2725 /* ATBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092CCF1136F4A19000C2725 /* ATBinder.h */; };
+		4092CCF2136F4A19000C2725 /* ATBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092CCF1136F4A19000C2725 /* ATBinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40A110AE13716E920022A575 /* ATAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A110AD13716E920022A575 /* ATAnnotation.m */; };
 		40A110AF13716E920022A575 /* ATAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 40A110AC13716E920022A575 /* ATAnnotation.h */; };
 		40A110B013716E920022A575 /* ATAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A110AD13716E920022A575 /* ATAnnotation.m */; };
 		40A110B313716EB20022A575 /* ATNamedAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 40A110B113716EB20022A575 /* ATNamedAnnotation.h */; };
 		40A110B413716EB20022A575 /* ATNamedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A110B213716EB20022A575 /* ATNamedAnnotation.m */; };
 		40A110B513716EB20022A575 /* ATNamedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A110B213716EB20022A575 /* ATNamedAnnotation.m */; };
+		40AB4D70139428D100317C1C /* ATInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 408991811365E23D002FE9AF /* ATInject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40C86C4A1381A71700AC5F17 /* conf in Resources */ = {isa = PBXBuildFile; fileRef = 40C86C431381A71700AC5F17 /* conf */; };
+		40EAAF491397881D00423B80 /* ATProviderBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 40185D2213752AC900551FC7 /* ATProviderBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40EAAF731397962200423B80 /* generate_doc.sh in Resources */ = {isa = PBXBuildFile; fileRef = 40EAAF721397962200423B80 /* generate_doc.sh */; };
 		AA747D9F0F9514B9006C5449 /* minit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +89,7 @@
 		40C86C491381A71700AC5F17 /* index.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = index.xsd; sourceTree = "<group>"; };
 		40C86C4F1381A72600AC5F17 /* ClassA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
 		40C86C501381A72600AC5F17 /* ClassA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassA.m; sourceTree = "<group>"; };
+		40EAAF721397962200423B80 /* generate_doc.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate_doc.sh; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* minit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libminit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libminit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				4089910E1365D34D002FE9AF /* tests */,
-				4089910D1365D325002FE9AF /* src */,
+				4089910D1365D325002FE9AF /* minit */,
 				408990EE1365D193002FE9AF /* GTM */,
 				40850D631365C92700AEE67D /* README */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -174,7 +175,7 @@
 			path = GTM;
 			sourceTree = "<group>";
 		};
-		4089910D1365D325002FE9AF /* src */ = {
+		4089910D1365D325002FE9AF /* minit */ = {
 			isa = PBXGroup;
 			children = (
 				408991811365E23D002FE9AF /* ATInject.h */,
@@ -195,7 +196,7 @@
 				40185D2513752CBE00551FC7 /* ATSingletonScope.h */,
 				40185D2613752CBE00551FC7 /* ATSingletonScope.m */,
 			);
-			path = src;
+			path = minit;
 			sourceTree = "<group>";
 		};
 		4089910E1365D34D002FE9AF /* tests */ = {
@@ -212,6 +213,7 @@
 		40C86C421381A71700AC5F17 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				40EAAF721397962200423B80 /* generate_doc.sh */,
 				40C86C431381A71700AC5F17 /* conf */,
 				40C86C441381A71700AC5F17 /* objc */,
 				40C86C451381A71700AC5F17 /* xml */,
@@ -246,10 +248,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40EAAF491397881D00423B80 /* ATProviderBlock.h in Headers */,
+				40AB4D70139428D100317C1C /* ATInject.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* minit_Prefix.pch in Headers */,
 				408991121365D378002FE9AF /* ATInjector.h in Headers */,
 				408991171365D3C9002FE9AF /* ATModule.h in Headers */,
-				408991821365E23D002FE9AF /* ATInject.h in Headers */,
 				4092CCAA136F45E8000C2725 /* ATInjectable.h in Headers */,
 				4092CCF2136F4A19000C2725 /* ATBinder.h in Headers */,
 				405D607E137052B1006A629E /* ATKey.h in Headers */,
@@ -281,9 +284,9 @@
 			productReference = 40850D6C1365CB1900AEE67D /* Unit Test.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D2AAC07D0554694100DB518D /* minit */ = {
+		D2AAC07D0554694100DB518D /* minitPhone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "minit" */;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "minitPhone" */;
 			buildPhases = (
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
@@ -293,7 +296,7 @@
 			);
 			dependencies = (
 			);
-			name = minit;
+			name = minitPhone;
 			productName = minit;
 			productReference = D2AAC07E0554694100DB518D /* libminit.a */;
 			productType = "com.apple.product-type.library.static";
@@ -318,7 +321,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* minit */,
+				D2AAC07D0554694100DB518D /* minitPhone */,
 				40850D6B1365CB1900AEE67D /* Unit Test */,
 			);
 		};
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C86C4A1381A71700AC5F17 /* conf in Resources */,
+				40EAAF731397962200423B80 /* generate_doc.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,8 +397,6 @@
 			files = (
 				408991131365D378002FE9AF /* ATInjector.m in Sources */,
 				408991181365D3C9002FE9AF /* ATModule.m in Sources */,
-				4089911D1365D3F1002FE9AF /* ATInjectorTest.m in Sources */,
-				408991221365D3FF002FE9AF /* ATModuleTest.m in Sources */,
 				405D607F137052B1006A629E /* ATKey.m in Sources */,
 				40A110B013716E920022A575 /* ATAnnotation.m in Sources */,
 				40A110B413716EB20022A575 /* ATNamedAnnotation.m in Sources */,
@@ -517,7 +519,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "minit" */ = {
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "minitPhone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,

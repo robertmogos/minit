@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_aae2fb4dc2eb9329e4fdce800b0395d9" kind="dir">
+    <compoundname>minit_reflex/helpers/</compoundname>
+    <innerfile refid="_app_delegate__i_phone_09_m_i_n_i_t_injection_helper_8m">AppDelegate_iPhone+MINITInjectionHelper.m</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/minit_reflex/helpers/"/>
+  </compounddef>
+</doxygen>

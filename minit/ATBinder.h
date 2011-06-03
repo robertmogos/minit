@@ -13,6 +13,10 @@
 //
 @protocol ATBinder
 
+// Binds a |cls| to a object
+-(id<ATBinder>) bind:(Class) cls toInstance:(id) obj;
+
+
 // Binds a |cls| to it's implementation class |immpl|
 -(id<ATBinder>) bind:(Class) cls toImplementation:(Class) impl;
 

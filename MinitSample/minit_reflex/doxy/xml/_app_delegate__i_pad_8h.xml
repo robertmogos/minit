@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_app_delegate__i_pad_8h" kind="file">
+    <compoundname>AppDelegate_iPad.h</compoundname>
+    <includes local="no">UIKit/UIKit.h</includes>
+    <includedby refid="_app_delegate__i_pad_8m" local="yes">iPad/AppDelegate_iPad.m</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="0">
+        <label>iPad/AppDelegate_iPad.h</label>
+        <link refid="AppDelegate_iPad.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>iPad/AppDelegate_iPad.h</label>
+        <link refid="AppDelegate_iPad.h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iPad/AppDelegate_iPad.m</label>
+        <link refid="_app_delegate__i_pad_8m"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_app_delegate__i_pad" prot="public">AppDelegate_iPad</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPad/AppDelegate_iPad.h"/>
+  </compounddef>
+</doxygen>

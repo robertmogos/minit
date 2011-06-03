@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 #import "ATInject.h"
 #import "ATBinder.h"
+
 @class ATSingletonScope;
 
 @interface ATInjector : NSObject <ATInject,ATBinder> {
@@ -19,6 +20,6 @@
   NSMutableDictionary* bindings_;
   // The singleton scope
   ATSingletonScope* singletonScope_;
-}
+} 
 
 @end

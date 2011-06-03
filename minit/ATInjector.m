@@ -81,6 +81,18 @@
                 forKey:key];
 }
 
+-(id<ATBinder>) bind:(Class) cls toInstance:(id) obj{
+  ATKey *key = [ATKey keyWithClass:cls];
+  ATProviderBlock provider = [[(id)^{
+    return obj;
+  } copy] autorelease];
+  
+  [bindings_ setObject:provider 
+                forKey:key];
+  return self;
+}
+
+
 // Maps a provider capable of building |impl| to a |cls| key in |bindings_|
 // Stores in |bindings_| a provider capable of building |impl|
 -(id<ATBinder>) bind:(Class) cls toImplementation:(Class) impl{

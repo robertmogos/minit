@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_f5ec7ca5f7e0858c2ed83b7e3599a48e" kind="dir">
+    <compoundname>iPad/</compoundname>
+    <innerfile refid="_app_delegate__i_pad_8h">AppDelegate_iPad.h</innerfile>
+    <innerfile refid="_app_delegate__i_pad_8m">AppDelegate_iPad.m</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPad/"/>
+  </compounddef>
+</doxygen>

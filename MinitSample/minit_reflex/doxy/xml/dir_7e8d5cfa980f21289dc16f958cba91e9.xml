@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="dir_7e8d5cfa980f21289dc16f958cba91e9" kind="dir">
+    <compoundname>iPhone/</compoundname>
+    <innerfile refid="_app_delegate__i_phone_8h">AppDelegate_iPhone.h</innerfile>
+    <innerfile refid="_app_delegate__i_phone_8m">AppDelegate_iPhone.m</innerfile>
+    <innerfile refid="_minit_sample_application_8h">MinitSampleApplication.h</innerfile>
+    <innerfile refid="_minit_sample_application_8m">MinitSampleApplication.m</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/"/>
+  </compounddef>
+</doxygen>

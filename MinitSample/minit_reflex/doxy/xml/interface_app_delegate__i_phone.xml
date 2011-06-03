@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="interface_app_delegate__i_phone" kind="class" prot="public">
+    <compoundname>AppDelegate_iPhone</compoundname>
+    <includes refid="_app_delegate__i_phone_8h" local="no">AppDelegate_iPhone.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_app_delegate__i_phone_1a9661454a6e39877e4637f584890a866d" prot="protected" static="no" mutable="no">
+        <type>UIWindow *</type>
+        <definition>UIWindow* AppDelegate_iPhone::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" line="12" bodyfile="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_app_delegate__i_phone_1a79f959ee14bee6cfa38e20443a9f5f91" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UIWindow *</type>
+        <definition>IBOutlet UIWindow* AppDelegate_iPhone::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" line="15" bodyfile="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_app_delegate__i_phone_1aec75003be30bb2785d86cbc930759160" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id AppDelegate_iPhone::initWithMessage:</definition>
+        <argsstring>(NSString *message)</argsstring>
+        <name>initWithMessage:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" line="17" bodyfile="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.m" bodystart="20" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_app_delegate__i_phone_1ab993f028042cf7fe91bb3d5030814d58" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id AppDelegate_iPhone(MINITInjectionHelper)::class_builder:</definition>
+        <argsstring>(id&lt; ATInject &gt; inject)</argsstring>
+        <name>class_builder:</name>
+        <param>
+          <type>id&lt; ATInject &gt;</type>
+          <declname>inject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/minit_reflex/helpers/AppDelegate_iPhone+MINITInjectionHelper.m" line="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" line="11" bodyfile="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" bodystart="11" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_app_delegate__i_phone_1ab993f028042cf7fe91bb3d5030814d58" prot="public" virt="virtual"><scope>AppDelegate_iPhone</scope><name>class_builder:</name></member>
+      <member refid="interface_app_delegate__i_phone_1aec75003be30bb2785d86cbc930759160" prot="public" virt="virtual"><scope>AppDelegate_iPhone</scope><name>initWithMessage:</name></member>
+      <member refid="interface_app_delegate__i_phone_1a9661454a6e39877e4637f584890a866d" prot="protected" virt="non-virtual"><scope>AppDelegate_iPhone</scope><name>window</name></member>
+      <member refid="interface_app_delegate__i_phone_1a79f959ee14bee6cfa38e20443a9f5f91" prot="public" virt="non-virtual"><scope>AppDelegate_iPhone</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
