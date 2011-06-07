@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_app_delegate__i_phone_8h" kind="file">
+    <compoundname>AppDelegate_iPhone.h</compoundname>
+    <includes local="no">UIKit/UIKit.h</includes>
+    <includedby refid="_app_delegate__i_phone_8m" local="yes">iPhone/AppDelegate_iPhone.m</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="0">
+        <label>iPhone/AppDelegate_iPhone.h</label>
+        <link refid="AppDelegate_iPhone.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>iPhone/AppDelegate_iPhone.h</label>
+        <link refid="AppDelegate_iPhone.h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iPhone/AppDelegate_iPhone.m</label>
+        <link refid="_app_delegate__i_phone_8m"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_app_delegate__i_phone" prot="public">AppDelegate_iPhone</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h"/>
+  </compounddef>
+</doxygen>

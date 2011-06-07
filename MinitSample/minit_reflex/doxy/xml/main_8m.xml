@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="main_8m" kind="file">
+    <compoundname>main.m</compoundname>
+    <includes local="no">UIKit/UIKit.h</includes>
+    <incdepgraph>
+      <node id="18">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="17">
+        <label>Shared/main.m</label>
+        <link refid="main.m"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8m_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/Shared/main.m" line="11" bodyfile="/Users/adi/Desktop/apocope/dev/minit/MinitSample/Shared/main.m" bodystart="11" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/Shared/main.m"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="_minit_sample_application_8h" kind="file">
+    <compoundname>MinitSampleApplication.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includedby refid="_minit_sample_application_8m" local="yes">iPhone/MinitSampleApplication.m</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="9">
+        <label>iPhone/MinitSampleApplication.h</label>
+        <link refid="MinitSampleApplication.h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>iPhone/MinitSampleApplication.h</label>
+        <link refid="MinitSampleApplication.h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>iPhone/MinitSampleApplication.m</label>
+        <link refid="_minit_sample_application_8m"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_minit_sample_application" prot="public">MinitSampleApplication</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/MinitSampleApplication.h"/>
+  </compounddef>
+</doxygen>

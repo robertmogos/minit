@@ -20,6 +20,7 @@
 -(id) initWithMessage:(NSString *) message{
   if (self = [super init]) {
     NSLog(@"Init message %@",message);
+    msg = [message copy];
   }
   return self;
 }
@@ -27,14 +28,17 @@
 -(id) init{
   [self release];
   ATInjector *i = [[[ATInjector alloc] init] autorelease];
-  [i bind:[NSString class] toInstance:@"Injected message"];
-  return [i instanceOf:[AppDelegate_iPhone class]];
+  [i bind:[NSString class] toInstance:@"MINIT Injected message"];
+  return [[i instanceOf:[AppDelegate_iPhone class]] retain];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
     // Override point for customization after application launch.
     
+    [[NSBundle mainBundle] loadNibNamed:@"MainWindow_iPhone" 
+                                owner:self options:nil];
+    [msgLabel setText:msg];
     [window makeKeyAndVisible];
     
     return YES;

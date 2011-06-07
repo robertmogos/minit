@@ -1,3 +1,7 @@
+REFLEX_BIN=$SRCROOT/../ruby/rreflex/bin/rreflex.rb
+OUTPUTDIR=$SRCROOT/minit_reflex/doxy
+GEN_DIR=$SRCROOT/minit_reflex/objc
+DOXY_BIN=/Applications/Doxygen.app/Contents/Resources/doxygen
 DOXYFILE=$(cat <<'DOXY_FILE_CONTENT'
 # Doxyfile 1.7.4
 
@@ -1718,12 +1722,18 @@ DOT_CLEANUP            = YES
 
 DOXY_FILE_CONTENT
 )
-OUTPUTDIR=$SRCROOT/minit_reflex/doxy
+
 if [ ! -d "$OUTPUTDIR" ]; then
     mkdir -p "$OUTPUTDIR"
 fi
+if [ ! -d "$GEN_DIR" ]; then
+    mkdir -p "$GEN_DIR"
+fi
+
 OPTIONS="
 INPUT=$SRCROOT
 OUTPUT_DIRECTORY=$OUTPUTDIR
 "
-(echo "$DOXYFILE" ; echo "$OPTIONS" ) | /Applications/Doxygen.app/Contents/Resources/doxygen -
+(echo "$DOXYFILE" ; echo "$OPTIONS" ) | $DOXY_BIN -
+echo "Executing rrflex : "
+$REFLEX_BIN $OUTPUTDIR/xml $GEN_DIR

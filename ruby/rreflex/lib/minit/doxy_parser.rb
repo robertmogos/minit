@@ -18,6 +18,12 @@ module Minit
     def parse_class i
       @c = 0
       interfaceName = i.elements['compoundname']
+      includes = i.elements['includes']
+      if includes.nil? then
+        interfaceHeader = ''
+      else
+        interfaceHeader = includes.text
+      end
       if interfaceName.nil?  then 
         puts i.inspect + "missing name for class"
         return
@@ -25,6 +31,7 @@ module Minit
         interfaceName = interfaceName.text
       end
       interface = Minit::Reflexion::Class.new(interfaceName)
+      interface.header_file = interfaceHeader
       i.elements.each("//memberdef[@kind='function']") {|f|
         @c += 1
         function = parse_method f

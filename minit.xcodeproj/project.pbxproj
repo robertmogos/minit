@@ -308,6 +308,7 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "minit" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -421,6 +422,7 @@
 				GCC_PREFIX_HEADER = minit_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = minit;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
 		};
@@ -435,6 +437,7 @@
 				GCC_PREFIX_HEADER = minit_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = minit;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};

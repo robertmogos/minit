@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate_iPhone : NSObject <UIApplicationDelegate> {
-    UIWindow *window; 
+    UIWindow *window;
+    NSString *msg;
+    IBOutlet UILabel *msgLabel;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -17,4 +19,3 @@
 -(id) initWithMessage:(NSString *) message;
 
 @end
-

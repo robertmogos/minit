@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.7.4">
+  <compound refid="interface_app_delegate__i_phone" kind="class"><name>AppDelegate_iPhone</name>
+    <member refid="interface_app_delegate__i_phone_1a9661454a6e39877e4637f584890a866d" kind="variable"><name>window</name></member>
+    <member refid="interface_app_delegate__i_phone_1a1af3755a3fd31ee32ec12196f8107b1f" kind="variable"><name>msg</name></member>
+    <member refid="interface_app_delegate__i_phone_1ad35843d453c46d466fecb889a5332cfe" kind="variable"><name>msgLabel</name></member>
+    <member refid="interface_app_delegate__i_phone_1a79f959ee14bee6cfa38e20443a9f5f91" kind="property"><name>window</name></member>
+    <member refid="interface_app_delegate__i_phone_1aec75003be30bb2785d86cbc930759160" kind="function"><name>initWithMessage:</name></member>
+  </compound>
+  <compound refid="interface_minit_sample_application" kind="class"><name>MinitSampleApplication</name>
+  </compound>
+  <compound refid="_app_delegate__i_phone_8h" kind="file"><name>AppDelegate_iPhone.h</name>
+  </compound>
+  <compound refid="_app_delegate__i_phone_8m" kind="file"><name>AppDelegate_iPhone.m</name>
+  </compound>
+  <compound refid="_minit_sample_application_8h" kind="file"><name>MinitSampleApplication.h</name>
+  </compound>
+  <compound refid="_minit_sample_application_8m" kind="file"><name>MinitSampleApplication.m</name>
+  </compound>
+  <compound refid="main_8m" kind="file"><name>main.m</name>
+    <member refid="main_8m_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dir_7e8d5cfa980f21289dc16f958cba91e9" kind="dir"><name>iPhone/</name>
+  </compound>
+  <compound refid="dir_459b9263f1b6badd22aaf0682856706c" kind="dir"><name>Shared/</name>
+  </compound>
+</doxygenindex>

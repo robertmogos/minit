@@ -87,6 +87,7 @@ class TestDoxyParser < Test::Unit::TestCase
     XML
     parser = Minit::DoxyParser.new()
     r = parser.parse(xml)
+    assert_equal(r[0].header_file,'ClassA.h')
     m = r[0].methods[0]
     assert_not_nil(m)
     assert_equal(m.returnType,'id')
