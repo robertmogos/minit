@@ -10,12 +10,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ATBinder.h"
-@protocol ATInject;
 
 
 
-@interface ATModule : NSObject {
-  id <ATInject> injector_;
+@interface ATModule : NSObject <ATBinder>{
+  id <ATBinder> injector_;
 }
--(id) initWithInjector:(id <ATInject>) injector;
+-(id) initWithInjector:(id <ATBinder>) injector;
 @end

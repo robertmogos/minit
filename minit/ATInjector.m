@@ -74,6 +74,15 @@
   return provider;
 }
 
+// Retruns a provider block of |cls| annotated with annotated with |annotation|
+-(ATProviderBlock) providerOf:(Class) cls annotated:(Class) annotation{
+  ATProviderBlock provider = [[(id)^{
+    return [self instanceOf:cls annotated:annotation];
+  } copy] autorelease];
+  return provider;
+}
+
+
 #pragma mark Bindings
 // registers a |key| bounded |provider| in |bindings_|
 -(void) setBinding:(ATProviderBlock)provider forKey:(ATKey*)key{

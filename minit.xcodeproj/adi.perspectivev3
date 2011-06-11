@@ -281,7 +281,7 @@
 										</array>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-									<string>{{0, 0}, {228, 278}}</string>
+									<string>{{0, 0}, {228, 263}}</string>
 								</dict>
 								<key>PBXTopSmartGroupGIDs</key>
 								<array/>
@@ -291,7 +291,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {245, 296}}</string>
+								<string>{{0, 0}, {245, 281}}</string>
 								<key>GroupTreeTableConfiguration</key>
 								<array>
 									<string>MainColumn</string>
@@ -303,7 +303,7 @@
 							<key>Module</key>
 							<string>PBXSmartGroupTreeModule</string>
 							<key>Proportion</key>
-							<string>296pt</string>
+							<string>281pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -360,7 +360,7 @@
 										</array>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-									<string>{{0, 0}, {228, 759}}</string>
+									<string>{{0, 0}, {228, 774}}</string>
 								</dict>
 								<key>PBXTopSmartGroupGIDs</key>
 								<array/>
@@ -370,7 +370,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 301}, {245, 777}}</string>
+								<string>{{0, 286}, {245, 792}}</string>
 								<key>GroupTreeTableConfiguration</key>
 								<array>
 									<string>MainColumn</string>
@@ -382,7 +382,7 @@
 							<key>Module</key>
 							<string>PBXSmartGroupTreeModule</string>
 							<key>Proportion</key>
-							<string>777pt</string>
+							<string>792pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -409,7 +409,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4038A904139EAC42006AFA1D</string>
+										<string>4092D9D713A3517C00C7AA3C</string>
 										<key>history</key>
 										<array>
 											<string>40850DA61365CEE900AEE67D</string>
@@ -451,7 +451,7 @@
 											<string>40EAB165139CB46C00423B80</string>
 											<string>40EAB166139CB46C00423B80</string>
 											<string>4038A903139EAC42006AFA1D</string>
-											<string>40EAAF6B13978C8800423B80</string>
+											<string>4038A904139EAC42006AFA1D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -465,18 +465,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {781, 670}}</string>
+								<string>{{0, 0}, {781, 662}}</string>
 								<key>RubberWindowFrame</key>
 								<string>64 59 1031 1119 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>670pt</string>
+							<string>662pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>403pt</string>
+							<string>411pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -492,7 +492,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {781, 376}}</string>
+										<string>{{10, 27}, {781, 384}}</string>
 										<key>RubberWindowFrame</key>
 										<string>64 59 1031 1119 0 0 1920 1178 </string>
 									</dict>
@@ -578,13 +578,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4038A8D1139EA354006AFA1D</string>
-				<string>4038A8D2139EA354006AFA1D</string>
+				<string>4092D9D813A3517C00C7AA3C</string>
+				<string>4092D9D913A3517C00C7AA3C</string>
 				<string>1CA23ED40692098700951B8B</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>4038A8D3139EA354006AFA1D</string>
+				<string>4092D9DA13A3517C00C7AA3C</string>
 				<string>40850D4F1365C83F00AEE67D</string>
-				<string>4038A8D4139EA354006AFA1D</string>
+				<string>4092D9DB13A3517C00C7AA3C</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
