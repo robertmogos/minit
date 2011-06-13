@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate_iPhone : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    NSString *msg;
-    IBOutlet UILabel *msgLabel;
+    UIWindow *window_;
+    NSString *xibName_;
+    IBOutlet UILabel *xibNameLabel_;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
--(id) initWithMessage:(NSString *) message;
+/**
+ * @param xibName @@InjectNamed(MainWindow)
+ */
+-(id) initWithXibName:(NSString *) xibName;
 
 @end

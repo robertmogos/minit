@@ -12,9 +12,9 @@
 @implementation AppDelegate_iPhone ( MINITInjectionHelper )
 
 +(id)class_builder:(id<ATInject>)inject{
-  NSString * p_0_message = [inject instanceOf:[NSString class]];
+  NSString * p_0_xibName = [inject instanceOf:[NSString class] named:@"MainWindow"];
   
-  return [[[self alloc] initWithMessage: p_0_message ] autorelease];
+  return [[[self alloc] initWithXibName: p_0_xibName ] autorelease];
 }
       
 @end

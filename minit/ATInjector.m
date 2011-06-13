@@ -13,6 +13,7 @@
 #import "ATKey.h"
 #import "ATProviderBlock.h"
 #import "ATSingletonScope.h"
+#import "ATModule.h"
 
 // This implementation is not thread safe !
 
@@ -29,6 +30,28 @@
   [bindings_ release];
   [singletonScope_ release];
   [super dealloc];
+}
+
+#pragma mark Loading modules
+
+// Creates injector instance and calls to helper configureModules: before
+// returning it
++(ATInjector*) injectorWithModules:(NSArray*) modules{
+    ATInjector *injector = [[[ATInjector alloc] init] autorelease];
+    [injector configureModules:modules];
+    return injector;
+}
+
+// creates a instance of each module and calls configure method on them
+-(void) configureModules:(NSArray*) modules{
+    for(Class moduleClass in modules){
+      id module = [[[moduleClass alloc] init] autorelease];
+      if([module isKindOfClass:[ATModule class]]){
+        [(ATModule*)module configureWithBinder:self];
+      }else {
+        NSLog(@"%@ is not a ATModule. Unable to load configuration",[module description]);
+      }
+    }
 }
 
 #pragma mark Injection
@@ -90,6 +113,7 @@
                 forKey:key];
 }
 
+// binds a provider returning |obj| instance in |bindings_|
 -(id<ATBinder>) bind:(Class) cls toInstance:(id) obj{
   ATKey *key = [ATKey keyWithClass:cls];
   ATProviderBlock provider = [[(id)^{
@@ -115,6 +139,20 @@
   return self;
 }
 
+// binds a provider returning |obj| instance in |bindings_| for a |name| named key
+-(id<ATBinder>) bind:(Class) cls 
+               named:(NSString*) name 
+          toInstance:(id) obj{
+  ATKey *key = [ATKey keyWithClass:cls named:name];
+  ATProviderBlock provider = [[(id)^{
+    return obj;
+  } copy] autorelease];
+  
+  [bindings_ setObject:provider 
+                forKey:key];
+  return self;
+}
+
 // Maps a provider capable of building |impl| to a |cls| named |name| key in 
 // |bindings_|
 -(id<ATBinder>) bind:(Class) cls named:(NSString*) name toImplementation:(Class) impl{
@@ -127,7 +165,24 @@
   return self;
 }
 
-
+// Maps a SCOPED provider capable of building |impl| to a |cls|  key in 
+// |bindings_|
+-(id<ATBinder>) bind:(Class) cls 
+    toImplementation:(Class) impl 
+             inScope:(Class) scope{
+  if (scope != [ATSingletonScope class]) {
+    // Maybe we should die nicely instead?
+    return [self bind:cls toImplementation:impl]; 
+  }
+  ATProviderBlock provider = [[(id)^{
+    return [(id)impl class_builder:self];
+  } copy] autorelease];
+  ATKey *key = [ATKey keyWithClass:cls];
+  ATProviderBlock scoped = [singletonScope_ scope:key unscoped:provider];
+  [self setBinding:scoped forKey:key];
+  return self;
+  
+}
 
 // Maps a SCOPED provider capable of building |impl| to a |cls| named |name| key in 
 // |bindings_|
@@ -149,4 +204,23 @@
   return self;
 }
 
+
+-(id<ATBinder>) bind:(Class) cls 
+       annotatedWith:(Class) annotation 
+    toImplementation:(Class) impl{
+  [NSException raise:NSInternalInconsistencyException 
+              format:@"Not implemented"];
+  return nil;
+}
+
+
+
+-(id<ATBinder>) bind:(Class) cls 
+       annotatedWith:(Class) annotation 
+    toImplementation:(Class) impl
+             inScope:(Class) scope{
+  [NSException raise:NSInternalInconsistencyException 
+              format:@"Not implemented"];
+  return nil;
+}
 @end

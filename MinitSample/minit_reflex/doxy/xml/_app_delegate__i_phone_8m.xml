@@ -4,6 +4,7 @@
     <compoundname>AppDelegate_iPhone.m</compoundname>
     <includes refid="_app_delegate__i_phone_8h" local="yes">AppDelegate_iPhone.h</includes>
     <includes local="yes">ATInjector.h</includes>
+    <includes refid="_minit_sample_module_8h" local="yes">MinitSampleModule.h</includes>
     <incdepgraph>
       <node id="6">
         <label>UIKit/UIKit.h</label>
@@ -21,6 +22,22 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ATModule.h</label>
+      </node>
+      <node id="8">
+        <label>MinitSampleModule.h</label>
+        <link refid="_minit_sample_module_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Foundation/Foundation.h</label>
       </node>
       <node id="7">
         <label>ATInjector.h</label>

@@ -4,11 +4,11 @@
     <compoundname>AppDelegate_iPhone</compoundname>
     <includes refid="_app_delegate__i_phone_8h" local="no">AppDelegate_iPhone.h</includes>
       <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="interface_app_delegate__i_phone_1a9661454a6e39877e4637f584890a866d" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="interface_app_delegate__i_phone_1a50ead732de6041295d92232a849b0740" prot="protected" static="no" mutable="no">
         <type>UIWindow *</type>
-        <definition>UIWindow* AppDelegate_iPhone::window</definition>
+        <definition>UIWindow* AppDelegate_iPhone::window_</definition>
         <argsstring></argsstring>
-        <name>window</name>
+        <name>window_</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -17,11 +17,11 @@
         </inbodydescription>
         <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" line="12" bodyfile="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" bodystart="12" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="interface_app_delegate__i_phone_1a1af3755a3fd31ee32ec12196f8107b1f" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="interface_app_delegate__i_phone_1abb1849b3a97862f37ce97c35fb5c573d" prot="protected" static="no" mutable="no">
         <type>NSString *</type>
-        <definition>NSString* AppDelegate_iPhone::msg</definition>
+        <definition>NSString* AppDelegate_iPhone::xibName_</definition>
         <argsstring></argsstring>
-        <name>msg</name>
+        <name>xibName_</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -30,11 +30,11 @@
         </inbodydescription>
         <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" line="13" bodyfile="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" bodystart="13" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="interface_app_delegate__i_phone_1ad35843d453c46d466fecb889a5332cfe" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="interface_app_delegate__i_phone_1a5814bbdfcc6e4e9ebd7c227c4e78a5fb" prot="protected" static="no" mutable="no">
         <type>IBOutlet UILabel *</type>
-        <definition>IBOutlet UILabel* AppDelegate_iPhone::msgLabel</definition>
+        <definition>IBOutlet UILabel* AppDelegate_iPhone::xibNameLabel_</definition>
         <argsstring></argsstring>
-        <name>msgLabel</name>
+        <name>xibNameLabel_</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -62,22 +62,30 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="interface_app_delegate__i_phone_1aec75003be30bb2785d86cbc930759160" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="interface_app_delegate__i_phone_1a36d285a6cbd118ddab0737de4674bd06" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>id</type>
-        <definition>id AppDelegate_iPhone::initWithMessage:</definition>
-        <argsstring>(NSString *message)</argsstring>
-        <name>initWithMessage:</name>
+        <definition>id AppDelegate_iPhone::initWithXibName:</definition>
+        <argsstring>(NSString *xibName)</argsstring>
+        <name>initWithXibName:</name>
         <param>
           <type>NSString *</type>
-          <declname>message</declname>
+          <declname>xibName</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xibName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>@InjectNamed(MainWindow) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" line="19" bodyfile="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.m" bodystart="20" bodyend="26"/>
+        <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" line="22" bodyfile="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.m" bodystart="21" bodyend="26"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -86,11 +94,11 @@
     </detaileddescription>
     <location file="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" line="11" bodyfile="/Users/adi/Desktop/apocope/dev/minit/MinitSample/iPhone/AppDelegate_iPhone.h" bodystart="11" bodyend="-1"/>
     <listofallmembers>
-      <member refid="interface_app_delegate__i_phone_1aec75003be30bb2785d86cbc930759160" prot="public" virt="virtual"><scope>AppDelegate_iPhone</scope><name>initWithMessage:</name></member>
-      <member refid="interface_app_delegate__i_phone_1a1af3755a3fd31ee32ec12196f8107b1f" prot="protected" virt="non-virtual"><scope>AppDelegate_iPhone</scope><name>msg</name></member>
-      <member refid="interface_app_delegate__i_phone_1ad35843d453c46d466fecb889a5332cfe" prot="protected" virt="non-virtual"><scope>AppDelegate_iPhone</scope><name>msgLabel</name></member>
-      <member refid="interface_app_delegate__i_phone_1a9661454a6e39877e4637f584890a866d" prot="protected" virt="non-virtual"><scope>AppDelegate_iPhone</scope><name>window</name></member>
+      <member refid="interface_app_delegate__i_phone_1a36d285a6cbd118ddab0737de4674bd06" prot="public" virt="virtual"><scope>AppDelegate_iPhone</scope><name>initWithXibName:</name></member>
       <member refid="interface_app_delegate__i_phone_1a79f959ee14bee6cfa38e20443a9f5f91" prot="public" virt="non-virtual"><scope>AppDelegate_iPhone</scope><name>window</name></member>
+      <member refid="interface_app_delegate__i_phone_1a50ead732de6041295d92232a849b0740" prot="protected" virt="non-virtual"><scope>AppDelegate_iPhone</scope><name>window_</name></member>
+      <member refid="interface_app_delegate__i_phone_1abb1849b3a97862f37ce97c35fb5c573d" prot="protected" virt="non-virtual"><scope>AppDelegate_iPhone</scope><name>xibName_</name></member>
+      <member refid="interface_app_delegate__i_phone_1a5814bbdfcc6e4e9ebd7c227c4e78a5fb" prot="protected" virt="non-virtual"><scope>AppDelegate_iPhone</scope><name>xibNameLabel_</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

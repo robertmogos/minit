@@ -22,4 +22,10 @@
   ATSingletonScope* singletonScope_;
 } 
 
+// Returns a injector with |modules| loaded
++(ATInjector*) injectorWithModules:(NSArray*) modules;
+
+// Loads and configures modules. |modules| must contain classes extending ATModule
+-(void) configureModules:(NSArray*) modules;
+
 @end

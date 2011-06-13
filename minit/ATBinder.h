@@ -16,6 +16,10 @@
 // Binds a |cls| to a object
 -(id<ATBinder>) bind:(Class) cls toInstance:(id) obj;
 
+// Binds |cls| named |named| to |obj| instance 
+-(id<ATBinder>) bind:(Class) cls 
+               named:(NSString*) name 
+          toInstance:(id) obj;
 
 // Binds a |cls| to it's implementation class |immpl|
 -(id<ATBinder>) bind:(Class) cls toImplementation:(Class) impl;
@@ -38,6 +42,7 @@
        annotatedWith:(Class) annotation 
     toImplementation:(Class) impl
              inScope:(Class) scope;
+
 
 
 // Binds |cls| named |name| to it's implementation |impl|

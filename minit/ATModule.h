@@ -11,10 +11,17 @@
 #import <Foundation/Foundation.h>
 #import "ATBinder.h"
 
-
+// Configuration class for modules 
+// Extend this class, implement configure and call the ATBinder protocol methods
+// Example:
 
 @interface ATModule : NSObject <ATBinder>{
-  id <ATBinder> injector_;
+  id <ATBinder> binder_;
 }
--(id) initWithInjector:(id <ATBinder>) injector;
-@end
+// Implement this method
+-(void) configure;
+
+// Loads module's configuration using binder
+-(void) configureWithBinder:(id <ATBinder>) binder;
+
+@end  

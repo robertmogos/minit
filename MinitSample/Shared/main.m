@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 
 int main(int argc, char *argv[]) {
-    
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, @"MinitSampleApplication", @"AppDelegate_iPhone");
+    int retVal = UIApplicationMain(argc, argv, @"UIApplication", @"AppDelegate_iPhone");
     [pool release];
     return retVal;
 }

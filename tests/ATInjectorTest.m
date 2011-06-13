@@ -12,25 +12,15 @@
 #import "ATInjector.h"
 #import "ATInject.h"
 #import "ATSingletonScope.h"
+#import "ATModule.h"
 
 @interface A : NSObject{
-@public BOOL initialized_; 
 }
--(id)init;
 @end
 
 @implementation A
-// Builds with the help of the injector an instance of self and returns it
-// |self| here is the class object, allowing to build instances of childs
-// without needing to redefine class_builder if init signature is the same
 +(id)class_builder:(id<ATInject>)inject{
   return [[[self alloc] init] autorelease];
-}
--(id)init{
-  if (self = [super init]){
-    initialized_ = TRUE;
-  }
-  return self;
 }
 @end
 
@@ -49,27 +39,69 @@
 @interface B: NSObject { 
 @public
   A* a_;
+  A* aa_;
+  A* aaa_;
 }
--(id)init:(A*) a;
+-(id)init:(A*) a seccond:(A*)aa third:(A*) aaa;
 @end
 
 @implementation B
 +(id)class_builder:(id<ATInject>)inject{
-  A* a = [inject instanceOf:[A class]];
-  return [[[self alloc] init:a ] autorelease];
+  A* a = [inject instanceOf:[A class]];    
+  A* aa = [inject instanceOf:[AA class]]; 
+  A* aaa = [inject instanceOf:[AA class] named:@"3A"];
+  return [[[self alloc] init:a seccond:aa third:aaa] autorelease];
 }
--(id)init:(A*) a{
+-(id)init:(A*) a seccond:(A*)aa third:(A*) aaa{
   if (self = [super init]){
     a_ = [a retain];
+    aa_ = [aa retain];
+    aaa_ = [aaa retain];
   }
   return self;
 }
 
 -(void) dealloc{
   [a_ release];
+  [aa_ release];
+  [aaa_ release];
   [super dealloc];
 }
 @end
+
+
+@interface S : NSObject{
+}
+@end
+
+@implementation S
++(id)class_builder:(id<ATInject>)inject{
+  return [[[self alloc] init] autorelease];
+}
+@end
+
+@interface Si : NSObject{
+}
+@end
+@implementation Si
+// no class_builder method because it is bound to instance
+@end
+
+//
+@interface TestModule : ATModule
+@end
+@implementation TestModule
+-(void) configure{
+  [self bind:[A class] toImplementation:[AA class]];
+  [self bind:[AA class] named:@"3A"  toImplementation:[AAA class]];
+  [self bind:[AA class] named:@"AASingleton" toImplementation:[AA class] inScope:[ATSingletonScope class]];
+  [self bind:[S class] toImplementation:[S class] inScope:[ATSingletonScope class]];
+  Si * si = [[[Si alloc] init] autorelease];
+  [self bind:[Si class] toInstance:si];
+  [self bind:[S class] named:@"SuperS" toInstance:si];
+}
+@end
+
 
 
 
@@ -79,46 +111,46 @@
 
 
 @implementation ATInjectorTest
--(void) testAInit{
-  A* a = [A class_builder:NULL];
-  STAssertTrue(a->initialized_,@"Should be true after init");
-}
--(void) testInjctionNoBinding{
-  ATInjector *i = [[[ATInjector alloc] init] autorelease];
+
+-(void) testThatDependenciesAreInjected{
+  ATInjector *i = 
+    [ATInjector injectorWithModules:[NSArray arrayWithObject:[TestModule class]]];
   B* b = [i instanceOf:[B class]];
-  A* injectedA= b->a_;
-  STAssertNotNil(injectedA,@"Should be true after init");
-  STAssertTrue([injectedA isKindOfClass:[A class]],@"Should retourn a A instance");
-}
--(void) testInjctionWithSimpleClassBinding{
-  ATInjector *i = [[[ATInjector alloc] init] autorelease];
-  [i bind:[A class] toImplementation:[AA class]];
-  id inejected = [i instanceOf:[A class]];
-  STAssertTrue([inejected isKindOfClass:[AA class]],@"retruned AA instance instead of A");
+  STAssertTrue([b->a_ isKindOfClass:[AA class]],@"Direct binding - should return a AA instance");
+  STAssertTrue([b->aa_ isKindOfClass:[AA class]],@"No binding - should return a AA instance"); 
+  STAssertTrue([b->aaa_ isKindOfClass:[AAA class]],@"Named binding - return a AAA instance");
+  Si *si_1 = [i instanceOf:[Si class]]; // instance bound
+  Si *si_2 = [i instanceOf:[Si class]]; // instance bound
+  STAssertTrue([si_1 isKindOfClass:[Si class]],@"Si instance should be returned");
+  STAssertEquals(si_1,si_2,@"The same instance should be returned");
+  si_1 = [i instanceOf:[S class] named:@"SuperS"]; // instance bound
+  si_2 = [i instanceOf:[S class] named:@"SuperS"]; // instance bound
+  STAssertTrue([si_1 isKindOfClass:[Si class]],@"Si instance should be returned");
+  STAssertEquals(si_1,si_2,@"The same instance should be returned");
+  
 }
 
--(void) testInjctionWithNamedClassBinding{
+
+-(void) testSingletons{
+  ATInjector *i = 
+    [ATInjector injectorWithModules:[NSArray arrayWithObject:[TestModule class]]];
+  id first = [i instanceOf:[AA class] named:@"AASingleton"];
+  id seccond  = [i instanceOf:[AA class] named:@"AASingleton"];
+  STAssertEquals(first,seccond,@"the same instance should be injected when singleton bound");
+  STAssertTrue([seccond isKindOfClass:[AA class]],@"AASingleton should have AA type");
+  first = [i instanceOf:[S class]];
+  seccond = [i instanceOf:[S class]];
+  STAssertEquals(first,seccond,@"the same instance should be injected when singleton bound");
+  STAssertTrue([seccond isKindOfClass:[S class]],@"S class instance expected");
+}
+
+
+-(void) testFailures{
   ATInjector *i = [[[ATInjector alloc] init] autorelease];
-  [i bind:[A class] named:@"MARKER" toImplementation:[AA class]];
-  id inejected = [i instanceOf:[A class]];
-  STAssertTrue([inejected isKindOfClass:[A class]],@"retruned AA instance instead of A");
-  inejected = [i instanceOf:[A class] named:@"MARKER"];
-  STAssertTrue([inejected isKindOfClass:[AA class]],@"retruned AA instance instead of A");
-  inejected = [i instanceOf:[A class] named:@"UNBOUND"];
+  A* inejected = [i instanceOf:[A class] named:@"UNBOUND"];
   STAssertNil(inejected,@"If there is no binding named UNBOUND it should return nil");
 }
 
--(void) testSingletonBindings{
-  ATInjector *i = [[[ATInjector alloc] init] autorelease];
-  [i bind:[A class] named:@"MARKER" toImplementation:[AA class] inScope:[ATSingletonScope class]];
-  id inejected = [i instanceOf:[A class]];
-  STAssertTrue([inejected isKindOfClass:[A class]],@"retruned AA instance instead of A");
-  id first = [i instanceOf:[A class] named:@"MARKER"];
-  STAssertTrue([first isKindOfClass:[AA class]],@"retruned AA instance instead of A");
-  id seccond  = [i instanceOf:[A class] named:@"MARKER"];
-  STAssertTrue([seccond isKindOfClass:[AA class]],@"If there is no binding named UNBOUND it should return nil");
-  STAssertEquals(first,seccond,@"the same instance should be injected when singleton bound");
-}
 -(void) testProviderInjection{
   ATInjector *i = [[[ATInjector alloc] init] autorelease];
   ATProviderBlock p = [i providerOf:[A class]];
@@ -136,6 +168,5 @@
   a2 = p();
   STAssertTrue([a2 isKindOfClass:[AA class]],@"should provide a instance of AA");
   STAssertTrue([a1 isKindOfClass:[AAA class]],@"should provide a instance of AAA");
-
 }
 @end

@@ -15,5 +15,6 @@
  * Something which can build himself assisted by a injector
  */
 @protocol ATInjectable
+// Uses injector to build an instance of self and returns it
 +(id)class_builder:(id<ATInject>)inject;
 @end

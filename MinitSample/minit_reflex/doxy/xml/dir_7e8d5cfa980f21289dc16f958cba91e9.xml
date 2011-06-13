@@ -4,8 +4,8 @@
     <compoundname>iPhone/</compoundname>
     <innerfile refid="_app_delegate__i_phone_8h">AppDelegate_iPhone.h</innerfile>
     <innerfile refid="_app_delegate__i_phone_8m">AppDelegate_iPhone.m</innerfile>
-    <innerfile refid="_minit_sample_application_8h">MinitSampleApplication.h</innerfile>
-    <innerfile refid="_minit_sample_application_8m">MinitSampleApplication.m</innerfile>
+    <innerfile refid="_minit_sample_module_8h">MinitSampleModule.h</innerfile>
+    <innerfile refid="_minit_sample_module_8m">MinitSampleModule.m</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
